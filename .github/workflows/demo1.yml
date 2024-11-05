@@ -1,5 +1,9 @@
+# https://docs.github.com/en/actions/writing-workflows/choosing-when-your-workflow-runs/events-that-trigger-workflows#push
 name: Events Demo 1
-on: ...
+on:
+  pull_requests:
+    types: [opened, reopened]
+  workflow_dispatch:
 jobs:
   deploy:
     runs-on: ubuntu-latest
